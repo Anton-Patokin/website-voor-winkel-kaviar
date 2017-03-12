@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description" content="{{trans('home.description')}}">
+    <meta name="author" content="MS express">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ trans('home.title') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -101,9 +103,9 @@ Responsive navbar-brand image CSS
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{url('/ru')}} "><img src="{{url('/image/icon/language_1.jpg')}}"
                                                        alt="icon laguage ru"> </a></li>
-                    <li><a href="{{url('/nl')}} "><img src="{{url('/image/icon/language_2.jpg')}}"
+                    <li><a href="{{url('/fr')}} "><img src="{{url('/image/icon/language_2.jpg')}}"
                                                        alt="icon laguage fr"> </a></li>
-                    <li><a href="{{url('/fr')}} "><img src="{{url('/image/icon/language_3.jpg')}}"
+                    <li><a href="{{url('/nl')}} "><img src="{{url('/image/icon/language_3.jpg')}}"
                                                        alt="icon laguage nl"> </a></li>
                 </ul>
             </div>
