@@ -21,7 +21,7 @@ Auth::routes();
 Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
-    
+
     Route::get('test',function(){
         return trans('home.test');
     });
