@@ -23,5 +23,5 @@ return [
     'message'=>'Cообщение',
     'subscribe'=>'держите меня в курсе',
     'send'=>'отослать',
-    'test' => 'привет',
+    'test' => 'goede dag',
 ];

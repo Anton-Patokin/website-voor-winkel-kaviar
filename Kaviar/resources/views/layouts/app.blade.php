@@ -89,6 +89,51 @@ Responsive navbar-brand image CSS
             margin: auto;
         }
 
+        h1 {
+            text-transform: uppercase;
+        }
+
+        .horizontal-rule-black {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #000;
+            margin: 1em 0;
+            padding: 0;
+        }
+
+        .sub-title {
+            text-transform: capitalize;
+        }
+
+        .btn {
+            border-radius: 0px;
+
+        }
+
+        .margin-top-1 {
+            margin-top: 1%;
+        }
+
+        .margin-top-2 {
+            margin-top: 2%;
+        }
+
+        .margin-top-3 {
+            margin-top: 3%;
+        }
+
+        .margin-top-4 {
+            margin-top: 4%;
+        }
+
+        .margin-top-5 {
+            margin-top: 5%;
+        }
+
+        .margin-top-10 {
+            margin-top: 10%;
+        }
 
     </style>
 
@@ -103,10 +148,10 @@ Responsive navbar-brand image CSS
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="{{url('/ru')}} "><img src="{{url('/image/icon/language_1.jpg')}}"
                                                        alt="icon laguage ru"> </a></li>
-                    <li><a href="{{url('/fr')}} "><img src="{{url('/image/icon/language_2.jpg')}}"
-                                                       alt="icon laguage fr"> </a></li>
                     <li><a href="{{url('/nl')}} "><img src="{{url('/image/icon/language_3.jpg')}}"
                                                        alt="icon laguage nl"> </a></li>
+                    <li><a href="{{url('/fr')}} "><img src="{{url('/image/icon/language_2.jpg')}}"
+                                                       alt="icon laguage fr"> </a></li>
                 </ul>
             </div>
         </div>
@@ -129,8 +174,11 @@ Responsive navbar-brand image CSS
                         <li class="active"><a href="#">{{trans('home.home')}}</a></li>
                         <li><a href="#">{{trans('home.fish')}}</a></li>
                         <li><a href="#">{{trans('home.caviar')}}</a></li>
+                        <li><a href="#">{{trans('home.delivery')}}</a></li>
                         <li><a href="#">{{trans('home.about_us')}}</a></li>
                         <li><a href="#">{{trans('home.contact')}}</a></li>
+
+
                     </ul>
                 </div>
                 <!--/.nav-collapse -->
