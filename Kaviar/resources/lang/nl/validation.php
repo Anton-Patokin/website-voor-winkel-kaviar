@@ -115,6 +115,7 @@ return [
     */
 
     'attributes'           => [
+        'checkbox'               => 'checkbox',
         'address'               => 'adres',
         'age'                   => 'leeftijd',
         'available'             => 'beschikbaar',

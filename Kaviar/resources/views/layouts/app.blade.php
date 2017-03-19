@@ -181,41 +181,22 @@ Responsive navbar-brand image CSS
         .img-center {
             margin: 0 auto;
         }
+        .line-left{
+            border-left: 1px solid #000;
+        }
+        .line-right{
+            border-right: 1px solid #000;
+        }
+        .margin-bottom-5{
+            margin-bottom: 5%;
+        }
+        .margin-bottom-2{
+            margin-bottom: 2%;
+        }
 
 
 
-        /*img.ri {*/
-        /*position: absolute;*/
-        /*max-width: 80%;*/
-        /*top: 10%;*/
-        /*left: 10%;*/
-        /*margin-top: 65px;*/
-        /*}*/
 
-        /*img.ri:empty {*/
-        /*top: 50%;*/
-        /*left: 50%;*/
-        /*-webkit-transform: translate(-50%, -50%);*/
-        /*-moz-transform: translate(-50%, -50%);*/
-        /*-ms-transform: translate(-50%, -50%);*/
-        /*-o-transform: translate(-50%, -50%);*/
-        /*transform: translate(-50%, -50%);*/
-        /*}*/
-
-        /*@media screen and (orientation: portrait) {*/
-        /*img.ri {*/
-        /*max-width: 90%;*/
-        /*margin-top: 55px;*/
-        /*}*/
-        /*}*/
-
-        /*@media screen and (orientation: landscape) {*/
-        /*img.ri {*/
-        /*max-height: 90%;*/
-        /*margin-top: 55px;*/
-
-        /*}*/
-        /*}*/
         input[type=checkbox]
         {
             /* Double-sized Checkboxes */
@@ -244,6 +225,7 @@ Responsive navbar-brand image CSS
             src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
             integrity="sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow="
             crossorigin="anonymous"></script>
+
 
 
 </head>
@@ -296,11 +278,26 @@ Responsive navbar-brand image CSS
     </div>
     <div class="container-fluid">
         @yield('content')
+        @include('footer')
     </div>
 </div>
 
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
+<script>
+    if ($('.has-error').length>0) {
+        console.log('has error');
+        $('html, body').animate({
+            scrollTop: $('.has-error').offset().top
+        }, 2000);
+    }
+    if ($('.alert-success').length>0) {
+        console.log('has error');
+        $('html, body').animate({
+            scrollTop: $('.alert-success').offset().top
+        }, 2000);
+    }
 
+</script>
 </html>

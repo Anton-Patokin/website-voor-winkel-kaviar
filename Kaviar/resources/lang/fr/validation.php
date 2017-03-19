@@ -108,9 +108,11 @@ return [
     |
     */
     'attributes'           => [
-        'name'                  => 'Nom',
+        'message'               => 'message',
+        'checkbox'               => 'Case à cocher',
+        'name'                  => 'nom',
         'username'              => 'Pseudo',
-        'email'                 => 'Adresse e-mail',
+        'email'                 => 'adresse e-mail',
         'first_name'            => 'Prénom',
         'last_name'             => 'Nom',
         'password'              => 'Mot de passe',

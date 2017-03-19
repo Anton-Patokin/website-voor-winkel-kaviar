@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Mail;
+use Config;
+use Session;
 
 class HomeController extends Controller
 {
@@ -44,10 +47,29 @@ class HomeController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255',
             'message' => 'required|max:1500',
+            'checkbox' => 'required'
         ]);
+        $person="";
+        if (isset($request->checkbox["'person'"])) {
+            $person = "Частное лицо";
+        }
+        if (isset($request->checkbox["'company'"])) {
+            $person = 'Фирма';
+        }
+        if(!isset($request->checkbox["'company'"])&&!isset($request->checkbox["'person'"])){
+            $person = 'что то пошло не так сообщите администратору';
+        }
+
+        Mail::send('mails.send', ['person' => $person, 'name' => $request->name, 'content' => $request->message, 'email' => $request->email, 'number' => $request->vat, 'lang' => Config::get('app.locale')], function ($message) use ($request) {
+
+            $message->from($request->email);
+            $message->subject("Сообщение от MS express");
+            $message->to('antwerpen2020@mail.ru');
+
+        });
 
 
         Session::put('success', 'success');
-        return view('welcome');
+        return redirect('/'.Config::get('app.locale'));
     }
 }

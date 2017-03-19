@@ -1,8 +1,16 @@
 <div class="second_background container-fluid row margin-top-5">
     <div class="row margin-top-5 ">
+        <div class="col-md-8 col-md-offset-2">
+            @if(Session::has('success'))
+                <div class="alert alert-success text-center">
+                    <h3>{{trans('mail.success')}}</h3>
+                    {{Session::forget('success')}}
+                </div>
+            @endif
+        </div>
         {{--<div class="col-md-12">--}}
-            {{--<h1>{{trans('home.mail_h1')}}</h1>--}}
-            {{--<hr class="horizontal-rule-white">--}}
+        {{--<h1>{{trans('home.mail_h1')}}</h1>--}}
+        {{--<hr class="horizontal-rule-white">--}}
         {{--</div>--}}
     </div>
     <div class="row margin-top-2">
@@ -21,7 +29,7 @@
                             :</label>
                         <div class="col-md-12">
                             <input type="name" class="form-control input-lg" id="name" name="name"
-                                   value="{{ old('name') }}" placeholder="Anton Patokin" >
+                                   value="{{ old('name') }}" placeholder="Anton Patokin">
                             @if ($errors->has('name'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -34,7 +42,7 @@
                             :</label>
                         <div class="col-md-12">
                             <input type="email" class="form-control input-lg" id="email" name="email"
-                                   value="{{ old('email') }}" placeholder="Anton.patokin&#64;gmail.com" >
+                                   value="{{ old('email') }}" placeholder="Anton.patokin&#64;gmail.com">
                             @if ($errors->has('email'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -56,10 +64,10 @@
                         </div>
                     </div>
                     <div class=" col-md-12 margin-top-2">
-                        <div class=" form-group{{ $errors->has('person') ? ' has-error' : '' }}">
+                        <div class=" form-group{{ $errors->has('checkbox') ? ' has-error' : '' }}">
                             <div class="col-md-3">
                                 <label class="margin-left-checkbox">
-                                    <input type="checkbox" name="company" id="opta"/>
+                                    <input type="checkbox" name="checkbox['company']" id="opta"/>
                             <span class="checkboxtext">
                               {{trans('mail.company')}}
                             </span>
@@ -67,24 +75,29 @@
                             </div>
                             <div class="col-md-3">
                                 <label class="margin-left-checkbox">
-                                    <input type="checkbox" name="person" id="opta" checked/>
+                                    <input type="checkbox" name="checkbox['person']" id="opta" checked/>
                             <span class="checkboxtext">
                               {{trans('mail.person')}}
                             </span>
                                 </label>
                             </div>
-                        </div>
-                        @if ($errors->has('peson'))
-                            <span class="help-block">
-                                        <strong>{{$errors->first('person')}}</strong>
+
+                            <div class="col-md-12">
+                                @if ($errors->has('checkbox'))
+                                    <span class="help-block">
+                                        <strong>{{$errors->first('checkbox')}}</strong>
                                     </span>
-                        @endif
+                                @endif
+                            </div>
+                        </div>
                     </div>
                     <div class=" form-group{{ $errors->has('message') ? ' has-error' : '' }}">
-                        <label for="message" class="col-md-4 control-label mail-label margin-top-1">{{trans('mail.message')}}
+                        <label for="message"
+                               class="col-md-4 control-label mail-label margin-top-1">{{trans('mail.message')}}
                             :</label>
                         <div class="col-md-12">
-                            <textarea rows="4" cols="50" type="message" class="form-control input-lg" id="message" name="message" value="{{ old('message') }}"></textarea>
+                            <textarea rows="4" cols="50" type="message" class="form-control input-lg" id="message"
+                                      name="message" value="{{ old('message') }}"></textarea>
                             @if ($errors->has('message'))
                                 <span class="help-block">
                                         <strong>{{$errors->first('message')}}</strong>
