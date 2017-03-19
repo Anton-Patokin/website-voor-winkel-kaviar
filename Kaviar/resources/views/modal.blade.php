@@ -1,5 +1,3 @@
-
-
 @if($id=='caviar')
 
     <div class="modal-header">
@@ -7,8 +5,10 @@
         <h3 class="modal-title">{{trans('modal.h1_caviar')}}</h3>
     </div>
     <div class="modal-body">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/k-9KPaD-8yo" frameborder="0"
-                allowfullscreen></iframe>
+        <div class="embed-responsive embed-responsive-4by3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/k-9KPaD-8yo" frameborder="0"
+                    allowfullscreen></iframe>
+        </div>
     </div>
 
 @elseif($id=='fish')

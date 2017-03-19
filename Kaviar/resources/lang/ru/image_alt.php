@@ -5,6 +5,7 @@ return [
     "other_product" => "несколько продуктов рядом с друг другом",
     "delivery" => "Машина для доставки свежих продуктов таких как рыбы,икры...",
     'modal_production'=>'',
+    'mail'=>'',
     "carousel_1" => "",
     "carousel_2" => "",
     "carousel_3" => "",

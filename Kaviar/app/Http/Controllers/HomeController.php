@@ -30,4 +30,15 @@ class HomeController extends Controller
     {
         return view('modal', ['id' => $id]);
     }
+
+    public function sendMail(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required|max:255',
+            'mail' => 'required|email|max:255',
+            'message' => 'required|max:1500',
+        ]);
+        Session::put('success', 'success');
+        return view('welcome');
+    }
 }

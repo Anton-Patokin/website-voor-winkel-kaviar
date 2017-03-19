@@ -101,6 +101,17 @@ Responsive navbar-brand image CSS
             margin: 1em 0;
             padding: 0;
         }
+        .horizontal-rule-white{
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #fff;
+            margin: 1em 0;
+            padding: 0;
+        }
+        .mail-label{
+            font-size: 1.4em;
+        }
 
         .modal-content iframe {
             margin: 0 auto;
@@ -139,9 +150,10 @@ Responsive navbar-brand image CSS
         .margin-top-10 {
             margin-top: 10%;
         }
+
         .modal-header {
-            padding:9px 15px;
-            border-bottom:1px solid #eee;
+            padding: 9px 15px;
+            border-bottom: 1px solid #eee;
             background-color: #2c3e50;
             color: #fff;
             -webkit-border-top-left-radius: 5px;
@@ -151,10 +163,82 @@ Responsive navbar-brand image CSS
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
         }
-        .close{
+
+        .close {
             color: #fff;
         }
 
+        .align-center {
+            text-align: center;
+        }
+
+        .second_background {
+            background-color: #2c3e50;
+            color: #fff;
+            padding-bottom: 7%;
+        }
+
+        .img-center {
+            margin: 0 auto;
+        }
+
+
+
+        /*img.ri {*/
+        /*position: absolute;*/
+        /*max-width: 80%;*/
+        /*top: 10%;*/
+        /*left: 10%;*/
+        /*margin-top: 65px;*/
+        /*}*/
+
+        /*img.ri:empty {*/
+        /*top: 50%;*/
+        /*left: 50%;*/
+        /*-webkit-transform: translate(-50%, -50%);*/
+        /*-moz-transform: translate(-50%, -50%);*/
+        /*-ms-transform: translate(-50%, -50%);*/
+        /*-o-transform: translate(-50%, -50%);*/
+        /*transform: translate(-50%, -50%);*/
+        /*}*/
+
+        /*@media screen and (orientation: portrait) {*/
+        /*img.ri {*/
+        /*max-width: 90%;*/
+        /*margin-top: 55px;*/
+        /*}*/
+        /*}*/
+
+        /*@media screen and (orientation: landscape) {*/
+        /*img.ri {*/
+        /*max-height: 90%;*/
+        /*margin-top: 55px;*/
+
+        /*}*/
+        /*}*/
+        input[type=checkbox]
+        {
+            /* Double-sized Checkboxes */
+            -ms-transform: scale(2); /* IE */
+            -moz-transform: scale(2); /* FF */
+            -webkit-transform: scale(2); /* Safari and Chrome */
+            -o-transform: scale(2); /* Opera */
+            padding: 10px;
+            margin-right: 10px;
+
+        }
+
+        /* Might want to wrap a span around your checkbox text */
+        .checkboxtext
+        {
+            /* Checkbox text */
+
+            font-size: 1.4em;
+            display: inline;
+        }
+        .margin-left-checkbox{
+            margin-left: 2%;
+        }
     </style>
     <script
             src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
