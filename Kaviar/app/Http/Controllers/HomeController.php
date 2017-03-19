@@ -10,7 +10,11 @@ class HomeController extends Controller
      * Create a new controller instance.
      *
      * @return void
+     *
+     *
      */
+    protected $messages = array();
+
     public function __construct()
     {
 //        $this->middleware('auth');
@@ -33,11 +37,16 @@ class HomeController extends Controller
 
     public function sendMail(Request $request)
     {
+//        $this->messages = array_dot(trans('Sentinel::validation.custom'));
+//        return trans('validation');
+
         $this->validate($request, [
             'name' => 'required|max:255',
-            'mail' => 'required|email|max:255',
+            'email' => 'required|email|max:255',
             'message' => 'required|max:1500',
         ]);
+
+
         Session::put('success', 'success');
         return view('welcome');
     }

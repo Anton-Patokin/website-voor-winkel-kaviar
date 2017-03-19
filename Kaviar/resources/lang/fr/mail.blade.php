@@ -1,9 +1,9 @@
 <div class="second_background container-fluid row margin-top-5">
     <div class="row margin-top-5 ">
-        {{--<div class="col-md-12">--}}
-            {{--<h1>{{trans('home.mail_h1')}}</h1>--}}
-            {{--<hr class="horizontal-rule-white">--}}
-        {{--</div>--}}
+        <div class="col-md-12">
+            <h1>{{trans('home.products_h1')}}</h1>
+            <hr class="horizontal-rule-white">
+        </div>
     </div>
     <div class="row margin-top-2">
         <div class="col-md-12">
@@ -13,7 +13,7 @@
         </div>
         <div class="col-md-12">
             <div class="col-md-8 col-md-offset-2">
-                <form role="form" method="POST" action="{{ $_SERVER['REQUEST_URI'] .'/send_mail'}}">
+                <form role="form" method="POST" action="{{url('/send_mail')}}">
                     {{ csrf_field() }}
 
                     <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
@@ -29,15 +29,15 @@
                             @endif
                         </div>
                     </div>
-                    <div class=" form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                        <label for="email" class="col-md-4 control-label mail-label margin-top-1">{{trans('mail.mail')}}
+                    <div class=" form-group{{ $errors->has('mail') ? ' has-error' : '' }}">
+                        <label for="mail" class="col-md-4 control-label mail-label margin-top-1">{{trans('mail.mail')}}
                             :</label>
                         <div class="col-md-12">
-                            <input type="email" class="form-control input-lg" id="email" name="email"
-                                   value="{{ old('email') }}" placeholder="Anton.patokin&#64;gmail.com" >
-                            @if ($errors->has('email'))
+                            <input type="mail" class="form-control input-lg" id="mail" name="mail"
+                                   value="{{ old('name') }}" placeholder="Anton.patokin&#64;gmail.com" >
+                            @if ($errors->has('name'))
                                 <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                             @endif
                         </div>

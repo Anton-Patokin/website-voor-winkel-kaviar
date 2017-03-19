@@ -29,7 +29,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
 
     Route::get('/home', 'HomeController@index');
     Route::get('/video/{id}', 'HomeController@video');
-
+    Route::post('/send_mail','HomeController@sendMail');
 });
 
-Route::post('/send_mail','HomeController@sendMail');
