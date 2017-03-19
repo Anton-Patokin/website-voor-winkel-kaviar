@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
 <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" lang="ru">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -102,6 +102,11 @@ Responsive navbar-brand image CSS
             padding: 0;
         }
 
+        .modal-content iframe {
+            margin: 0 auto;
+            display: block;
+        }
+
         .sub-title {
             text-transform: capitalize;
         }
@@ -134,8 +139,27 @@ Responsive navbar-brand image CSS
         .margin-top-10 {
             margin-top: 10%;
         }
+        .modal-header {
+            padding:9px 15px;
+            border-bottom:1px solid #eee;
+            background-color: #2c3e50;
+            color: #fff;
+            -webkit-border-top-left-radius: 5px;
+            -webkit-border-top-right-radius: 5px;
+            -moz-border-radius-topleft: 5px;
+            -moz-border-radius-topright: 5px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        .close{
+            color: #fff;
+        }
 
     </style>
+    <script
+            src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
+            integrity="sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow="
+            crossorigin="anonymous"></script>
 
 
 </head>
@@ -194,4 +218,5 @@ Responsive navbar-brand image CSS
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
+
 </html>

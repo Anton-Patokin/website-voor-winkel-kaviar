@@ -25,4 +25,9 @@ class HomeController extends Controller
     {
         return view('welcome');
     }
+
+    public function video($id)
+    {
+        return view('modal', ['id' => $id]);
+    }
 }

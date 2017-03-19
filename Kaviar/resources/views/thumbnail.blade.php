@@ -11,7 +11,13 @@
             <div class="caption">
                 <h3 class="sub-title">{{trans('home.fish')}}</h3>
                 <p>{{trans('home.fish_text_short')}}</p>
-                <p><a href="{{ $_SERVER['REQUEST_URI'] .'/test'}}" class="btn btn-info" role="button">{{trans('home.production_button')}}</a><a href="{{ $_SERVER['REQUEST_URI'] .'/test'}}" class="btn btn-success pull-right" role="button">{{trans('home.production_button')}}</a></p>
+                <p><a href="{{ $_SERVER['REQUEST_URI'] .'/test'}}" class="btn btn-info"
+                      role="button">{{trans('home.production_button')}}</a>
+                    <a href="{{ $_SERVER['REQUEST_URI'] .'/video/fish'}}" class="btn btn-success pull-right"
+                       role="button" data-toggle="modal"
+                       data-target="#myModal">{{trans('home.production_how_it_made_button')}}</a>
+
+                </p>
             </div>
         </div>
     </div>
@@ -21,7 +27,12 @@
             <div class="caption">
                 <h3 class="sub-title">{{trans('home.caviar')}}</h3>
                 <p>{{trans('home.caviar_text_short')}}</p>
-                <p><a href="#" class="btn btn-info" role="button">{{trans('home.production_button')}}</a></p>
+                <p>
+                    <a href="#" class="btn btn-info" role="button">{{trans('home.production_button')}}</a>
+                    <a href="{{ $_SERVER['REQUEST_URI'] .'/video/caviar'}}" class="btn btn-success pull-right"
+                       role="button" data-toggle="modal" data-target="#myModal_1">{{trans('home.video_button')}}</a>
+
+                </p>
             </div>
         </div>
     </div>
@@ -43,6 +54,23 @@
                 <p>{{trans('home.delivery_text_short')}}</p>
                 <p><a href="#" class="btn btn-info" role="button">{{trans('home.delivery_button')}}</a></p>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div id="myModal" class="modal fade " role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="myModal_1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
         </div>
     </div>
 </div>

@@ -36,5 +36,8 @@ return [
     'send' => 'отослать',
     'test' => 'привет',
     'products_title' => 'наша продукцыя',
-    'production_button'=>'Продукция'
+    'production_button'=>'Асортимент',
+    'production_how_it_made_button'=>'Процесс',
+    'video_button'=>'Видео'
+
 ];
