@@ -101,7 +101,8 @@ Responsive navbar-brand image CSS
             margin: 1em 0;
             padding: 0;
         }
-        .horizontal-rule-white{
+
+        .horizontal-rule-white {
             display: block;
             height: 1px;
             border: 0;
@@ -109,7 +110,8 @@ Responsive navbar-brand image CSS
             margin: 1em 0;
             padding: 0;
         }
-        .mail-label{
+
+        .mail-label {
             font-size: 1.4em;
         }
 
@@ -181,24 +183,24 @@ Responsive navbar-brand image CSS
         .img-center {
             margin: 0 auto;
         }
-        .line-left{
+
+        .line-left {
             border-left: 1px solid #000;
         }
-        .line-right{
+
+        .line-right {
             border-right: 1px solid #000;
         }
-        .margin-bottom-5{
+
+        .margin-bottom-5 {
             margin-bottom: 5%;
         }
-        .margin-bottom-2{
+
+        .margin-bottom-2 {
             margin-bottom: 2%;
         }
 
-
-
-
-        input[type=checkbox]
-        {
+        input[type=checkbox] {
             /* Double-sized Checkboxes */
             -ms-transform: scale(2); /* IE */
             -moz-transform: scale(2); /* FF */
@@ -210,22 +212,36 @@ Responsive navbar-brand image CSS
         }
 
         /* Might want to wrap a span around your checkbox text */
-        .checkboxtext
-        {
+        .checkboxtext {
             /* Checkbox text */
 
             font-size: 1.4em;
             display: inline;
         }
-        .margin-left-checkbox{
+
+        .margin-left-checkbox {
             margin-left: 2%;
+        }
+        .maging_admin{
+            margin-bottom: 400px;
+        }
+
+        @media screen and (max-width: 991px) {
+            .line-left {
+                border-left: 0px solid #000;
+            }
+        }
+        .odd{
+            background-color: #99cb84;
+        }
+        .even{
+            background-color: #abdbff;
         }
     </style>
     <script
             src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
             integrity="sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow="
             crossorigin="anonymous"></script>
-
 
 
 </head>
@@ -236,6 +252,11 @@ Responsive navbar-brand image CSS
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
 
                 <ul class="nav navbar-nav navbar-right">
+                    @if(Auth::user())
+                        <li >
+                            <a href="{{ url('/mails') }}">Емейлы</a>
+                        </li>
+                    @endif
                     <li><a href="{{url('/ru')}} "><img src="{{url('/image/icon/language_1.jpg')}}"
                                                        alt="icon laguage ru"> </a></li>
                     <li><a href="{{url('/nl')}} "><img src="{{url('/image/icon/language_3.jpg')}}"
@@ -286,13 +307,13 @@ Responsive navbar-brand image CSS
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 <script>
-    if ($('.has-error').length>0) {
+    if ($('.has-error').length > 0) {
         console.log('has error');
         $('html, body').animate({
             scrollTop: $('.has-error').offset().top
         }, 2000);
     }
-    if ($('.alert-success').length>0) {
+    if ($('.alert-success').length > 0) {
         console.log('has error');
         $('html, body').animate({
             scrollTop: $('.alert-success').offset().top

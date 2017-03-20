@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Mail;
 use Config;
 use Session;
+use App\Save_mail;
 
 class HomeController extends Controller
 {
@@ -72,4 +73,26 @@ class HomeController extends Controller
         Session::put('success', 'success');
         return redirect('/'.Config::get('app.locale'));
     }
+    public function saveMail(Request $request){
+        $this->validate($request, [
+            'email_save' => 'required|email|max:255',
+            'checkbox_save' => 'required'
+        ]);
+
+        $person="";
+        if (isset($request->checkbox_save["'person'"])) {
+            $person = "Частное лицо";
+        }
+        if (isset($request->checkbox_save["'company'"])) {
+            $person = 'Фирма';
+        }
+        $mail=new Save_mail;
+        $mail->email = $request->email_save;
+        $mail->person =$person;
+        $mail->save();
+        Session::put('success_save', 'success');
+
+        return redirect('/'.Config::get('app.locale'));    }
 }
+
+

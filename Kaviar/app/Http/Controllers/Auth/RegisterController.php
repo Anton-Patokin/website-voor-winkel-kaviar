@@ -6,6 +6,7 @@ use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Config;
 
 class RegisterController extends Controller
 {
@@ -47,6 +48,10 @@ class RegisterController extends Controller
      */
     protected function validator(array $data)
     {
+        $users =User::all();
+        if (count($users)>0){
+            return redirect('/'.Config::get('app.locale'));
+        }
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
