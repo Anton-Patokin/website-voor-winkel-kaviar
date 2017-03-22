@@ -222,7 +222,8 @@ Responsive navbar-brand image CSS
         .margin-left-checkbox {
             margin-left: 2%;
         }
-        .maging_admin{
+
+        .maging_admin {
             margin-bottom: 400px;
         }
 
@@ -231,12 +232,63 @@ Responsive navbar-brand image CSS
                 border-left: 0px solid #000;
             }
         }
-        .odd{
+
+        .odd {
             background-color: #99cb84;
         }
-        .even{
+
+        .even {
             background-color: #abdbff;
         }
+
+        .font-normal-banner {
+            text-transform: none;
+            font-size: 3em;
+        }
+
+        @media screen and (min-width: 768px) {
+            .font-normal-banner {
+                font-size: 3em;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .font-normal-banner {
+                font-size: 1.5em;
+            }
+        }
+
+        .sub-title {
+            background-color: #2c3e50;
+            color: #fff;
+            text-align: center;
+            padding-top:10px;
+            padding-bottom:10px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            font-size: 2em;
+
+        }
+        #box {
+            position: relative;
+        }
+
+        #box::before,
+        #box::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-color: transparent;
+            border-style: solid;
+        }
+
+        #box::after {
+            border-width: 1em;
+            border-right-color: rgba(245,248,255,1);
+            border-top-color:rgba(245,248,255,1);
+        }
+
     </style>
     <script
             src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
@@ -253,8 +305,11 @@ Responsive navbar-brand image CSS
 
                 <ul class="nav navbar-nav navbar-right">
                     @if(Auth::user())
-                        <li >
+                        <li>
                             <a href="{{ url('/mails') }}">Емейлы</a>
+                        </li>
+                        <li>
+                            <a href="{{ url('/add-product') }}">Добавить продукт</a>
                         </li>
                     @endif
                     <li><a href="{{url('/ru')}} "><img src="{{url('/image/icon/language_1.jpg')}}"

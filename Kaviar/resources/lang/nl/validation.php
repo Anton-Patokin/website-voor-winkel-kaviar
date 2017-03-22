@@ -115,6 +115,8 @@ return [
     */
 
     'attributes'           => [
+        'email_save' => 'e-mailadres',
+        'checkbox_save' => 'checkbox',
         'checkbox'               => 'checkbox',
         'address'               => 'adres',
         'age'                   => 'leeftijd',

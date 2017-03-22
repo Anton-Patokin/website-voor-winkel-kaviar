@@ -32,5 +32,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
     Route::post('/send_mail','HomeController@sendMail');
     Route::post('/save_mail','HomeController@saveMail');
     Route::get('/mails','AdminController@show_mails');
+    Route::get('/add-product','AdminController@add_product');
+    Route::get('/show-product-fish','AdminController@show_product');
+
+
 
 });

@@ -16,4 +16,7 @@ class AdminController extends Controller
         $mails=Save_mail::all();
         return view('admin.show_mail')->with('emails',$mails);
     }
+    public  function add_product(){
+        return view('admin.add_product');
+    }
 }
