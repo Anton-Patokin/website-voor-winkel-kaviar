@@ -23,23 +23,9 @@ Responsive navbar-brand image CSS
 - add 100% height and width auto ... similar to how bootstrap img-responsive class works
 ***********************************/
 
-        .navbar-brand {
-            padding: 0px;
-        }
-
-        .navbar-brand > img {
-            height: 100%;
-            padding: 15px;
-            width: auto;
-        }
-
         /* EXAMPLE 3
 
         line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
-
-        .example3 .navbar-brand {
-            height: 80px;
-        }
 
         .example3 .nav > li > a {
             font-size: 15px;
@@ -123,6 +109,7 @@ Responsive navbar-brand image CSS
         .sub-title {
             text-transform: capitalize;
         }
+
 
         .btn {
             border-radius: 0px;
@@ -262,13 +249,22 @@ Responsive navbar-brand image CSS
             background-color: #2c3e50;
             color: #fff;
             text-align: center;
-            padding-top:10px;
-            padding-bottom:10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
             margin-bottom: 0px;
             margin-top: 0px;
             font-size: 2em;
 
         }
+.sub-title-richt-caption{
+    color: #2c3e50;
+    text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 2em;
+}
         #box {
             position: relative;
         }
@@ -285,8 +281,75 @@ Responsive navbar-brand image CSS
 
         #box::after {
             border-width: 1em;
-            border-right-color: rgba(245,248,255,1);
-            border-top-color:rgba(245,248,255,1);
+            border-right-color: rgba(245, 248, 255, 1);
+            border-top-color: rgba(245, 248, 255, 1);
+        }
+
+        .lower-nav {
+            color: #fff;
+            font-size: 20px;
+            padding: 23px 20px;
+            height: 78px;
+            color: #266080;
+            background-color: #fff;
+            border-bottom: 6px solid #266080;
+        }
+
+        #brand-logo {
+            margin-top: -1px;
+            background-size: cover;
+            position: absolute;
+            border: 3px solid #fff;
+        }
+
+        #brand-logo img {
+            width: 221px;
+            height: 221px;
+            min-width: 150px;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5em;
+            padding-top: 35px;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .lower-nav {
+                font-size: 20px;
+                padding: 25px 20px;
+            }
+
+            .navbar-brand {
+                display: block;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .lower-nav {
+                font-size: 18px;
+                padding: 20px 10px;
+            }
+        }
+
+        .thumbnail.right-caption{
+            background-color: #fff;
+        }
+        .thumbnail.right-caption > img {
+            margin-left: 0;
+            border: 3px solid #fff;
+            padding: 0;
+            float: left;
+            margin-right: 9px;
+        }
+
+        .thumbnail.right-caption {
+            float: left;
+        }
+
+        .thumbnail.right-caption > .caption {
+            padding: 4px;
         }
 
     </style>
@@ -300,65 +363,95 @@ Responsive navbar-brand image CSS
 <body>
 <div id="app">
     <nav class="navbar navbar-default navbar-static-top nav_top">
-        <div class="container">
-            <div class="collapse navbar-collapse" id="app-navbar-collapse">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="collapse navbar-collapse" id="app-navbar-collapse">
 
-                <ul class="nav navbar-nav navbar-right">
-                    @if(Auth::user())
-                        <li>
-                            <a href="{{ url('/mails') }}">Емейлы</a>
-                        </li>
-                        <li>
-                            <a href="{{ url('/add-product') }}">Добавить продукт</a>
-                        </li>
-                    @endif
-                    <li><a href="{{url('/ru')}} "><img src="{{url('/image/icon/language_1.jpg')}}"
-                                                       alt="icon laguage ru"> </a></li>
-                    <li><a href="{{url('/nl')}} "><img src="{{url('/image/icon/language_3.jpg')}}"
-                                                       alt="icon laguage nl"> </a></li>
-                    <li><a href="{{url('/fr')}} "><img src="{{url('/image/icon/language_2.jpg')}}"
-                                                       alt="icon laguage fr"> </a></li>
-                </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            @if(Auth::user())
+                                <li>
+                                    <a href="{{ url('/mails') }}">Емейлы</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('/add-product') }}">Добавить продукт</a>
+                                </li>
+                            @endif
+                            <li><a href="{{url('/ru')}} "><img src="{{url('/image/icon/language_1.jpg')}}"
+                                                               alt="icon laguage ru"> </a></li>
+                            <li><a href="{{url('/nl')}} "><img src="{{url('/image/icon/language_3.jpg')}}"
+                                                               alt="icon laguage nl"> </a></li>
+                            <li><a href="{{url('/fr')}} "><img src="{{url('/image/icon/language_2.jpg')}}"
+                                                               alt="icon laguage fr"> </a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
     <div class="example3 main_navbar">
         <nav class="navbar navbar-inverse navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href=""><img src="{{url('/image/logo.png')}}" alt="{{trans('home.logo')}}">
-                    </a>
-                </div>
-                <div id="navbar3" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">{{trans('home.home')}}</a></li>
-                        <li><a href="#">{{trans('home.fish')}}</a></li>
-                        <li><a href="#">{{trans('home.caviar')}}</a></li>
-                        <li><a href="#">{{trans('home.delivery')}}</a></li>
-                        <li><a href="#">{{trans('home.about_us')}}</a></li>
-                        <li><a href="#">{{trans('home.contact')}}</a></li>
+
+            <div class="container-fluid">
+                <div class="row">
 
 
-                    </ul>
+                    <div class="col-md-2 col-sm-2 hidden-xs nopadding">
+                        <div id="brand-logo">
+                            <a href="{{url('/'.$language)}}"><img src="{{url('/image/logo.jpg')}}"
+                                                                  alt="{{trans('home.logo')}}"></a>
+                        </div>
+                    </div>
+                    <div class="col-md-10 col-sm-12">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                    data-target="#navbar3">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+
+                            {{--<img src="{{url('/image/logo.jpg')}}" alt="{{trans('home.logo')}}">--}}
+
+                            <a class="navbar-brand" href="">MS Express
+                            </a>
+                        </div>
+                        <div id="navbar3" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="{{ Request::path() == $language || Request::path() == '/' ? 'active' : '' }}">
+                                    <a href="{{url('/'.$language)}}">{{trans('home.home')}}</a></li>
+
+                                <li class="{{ Request::path() == $language.'/product/fish' || Request::path() == '/product/fish' ? 'active' : '' }}">
+                                    <a href="{{url('/'.$language.'/product/fish')}}">{{trans('home.fish')}}</a></li>
+
+                                <li class="{{ Request::path() == $language.'/product/caviar' || Request::path() == '/product/caviar' ? 'active' : '' }}">
+                                    <a href="{{url('/'.$language.'/product/caviar')}}">{{trans('home.caviar')}}</a></li>
+
+                                <li class="{{ Request::path() == $language.'/product/other' || Request::path() == '/product/other' ? 'active' : '' }}">
+                                    <a href="{{url('/'.$language.'/product/other')}}">{{trans('home.other')}}</a></li>
+
+                                <li><a class="scroll_anker" name="about_us" href="#">{{trans('home.about_us')}}</a></li>
+                                <li><a class="scroll_anker" name="contact" href="#">{{trans('home.contact')}}</a></li>
+
+
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse -->
+                    </div>
                 </div>
-                <!--/.nav-collapse -->
             </div>
             <!--/.container-fluid -->
         </nav>
     </div>
     <div class="container-fluid">
         @yield('content')
-        @include('footer')
+
     </div>
 </div>
 
 <!-- Scripts -->
+
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 <script>
@@ -374,6 +467,11 @@ Responsive navbar-brand image CSS
             scrollTop: $('.alert-success').offset().top
         }, 2000);
     }
+    $('.scroll_anker').click(function ($this) {
+        $('html, body').animate({
+            scrollTop: $('#' + $(this).attr('name')).offset().top
+        }, 2000);
+    })
 
 </script>
 </html>

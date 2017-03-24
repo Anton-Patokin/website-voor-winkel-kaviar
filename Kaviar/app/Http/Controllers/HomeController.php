@@ -31,7 +31,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('welcome');
+        return view('welcome')->with('language', Config::get('app.locale'));
+    }
+
+
+    public function product($product)
+    {
+        return view('products.producte')->with('language', Config::get('app.locale'))->with('product', $product);
     }
 
     public function video($id)
@@ -50,14 +56,14 @@ class HomeController extends Controller
             'message' => 'required|max:1500',
             'checkbox' => 'required'
         ]);
-        $person="";
+        $person = "";
         if (isset($request->checkbox["'person'"])) {
             $person = "Частное лицо";
         }
         if (isset($request->checkbox["'company'"])) {
             $person = 'Фирма';
         }
-        if(!isset($request->checkbox["'company'"])&&!isset($request->checkbox["'person'"])){
+        if (!isset($request->checkbox["'company'"]) && !isset($request->checkbox["'person'"])) {
             $person = 'что то пошло не так сообщите администратору';
         }
 
@@ -71,28 +77,31 @@ class HomeController extends Controller
 
 
         Session::put('success', 'success');
-        return redirect('/'.Config::get('app.locale'));
+        return redirect('/' . Config::get('app.locale'));
     }
-    public function saveMail(Request $request){
+
+    public function saveMail(Request $request)
+    {
         $this->validate($request, [
             'email_save' => 'required|email|max:255',
             'checkbox_save' => 'required'
         ]);
 
-        $person="";
+        $person = "";
         if (isset($request->checkbox_save["'person'"])) {
             $person = "Частное лицо";
         }
         if (isset($request->checkbox_save["'company'"])) {
             $person = 'Фирма';
         }
-        $mail=new Save_mail;
+        $mail = new Save_mail;
         $mail->email = $request->email_save;
-        $mail->person =$person;
+        $mail->person = $person;
         $mail->save();
         Session::put('success_save', 'success');
 
-        return redirect('/'.Config::get('app.locale'));    }
+        return redirect('/' . Config::get('app.locale'));
+    }
 }
 
 

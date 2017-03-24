@@ -1,4 +1,4 @@
-<div class="second_background container-fluid row margin-top-5">
+<div class="second_background container-fluid row margin-top-5 " id="contact">
     <div class="row margin-top-5 ">
         <div class="col-md-8 col-md-offset-2">
             @if(Session::has('success'))

@@ -18,23 +18,20 @@
 Auth::routes();
 
 
-Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-{
+Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
     /** ADD ALL LOCALIZED ROUTES INSIDE THIS GROUP **/
 
-    Route::get('test',function(){
+    Route::get('test', function () {
         return trans('home.test');
     });
     Route::get('/', 'HomeController@index');
 
     Route::get('/home', 'HomeController@index');
     Route::get('/video/{id}', 'HomeController@video');
-    Route::post('/send_mail','HomeController@sendMail');
-    Route::post('/save_mail','HomeController@saveMail');
-    Route::get('/mails','AdminController@show_mails');
-    Route::get('/add-product','AdminController@add_product');
-    Route::get('/show-product-fish','AdminController@show_product');
-
-
-
+    Route::post('/send_mail', 'HomeController@sendMail');
+    Route::post('/save_mail', 'HomeController@saveMail');
+    Route::get('/mails', 'AdminController@show_mails');
+    Route::get('/add-product', 'AdminController@add_product');
+    Route::get('/show-product-fish', 'AdminController@show_product');
+    Route::get('/product/{product}', 'HomeController@product');
 });

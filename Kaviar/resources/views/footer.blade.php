@@ -3,7 +3,7 @@
         <div class="col-md-12 margin-bottom-2">
             <div class="col-md-6 ">
                 {{--text-center--}}
-                <div class="col-md-12 ">
+                <div class="col-md-12 " id="about_us">
                     <h2>{{trans('home.about_us')}}</h2>
                     <p>{{trans('home.about_us_text')}}</p>
                 </div>

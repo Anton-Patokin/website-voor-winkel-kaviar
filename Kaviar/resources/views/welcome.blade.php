@@ -4,5 +4,7 @@
     @include('carousel')
     @include('thumbnail')
     @include('mail')
+    @include('footer')
+
 
 @endsection

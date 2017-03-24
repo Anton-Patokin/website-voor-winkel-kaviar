@@ -4769,11 +4769,11 @@ tbody.collapse.in {
 }
 
 .navbar-default .navbar-brand {
-    color: #777
+    color: #fff
 }
 
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
-    color: #5e5e5e;
+    color: #fff;
     background-color: transparent
 }
 
@@ -4864,7 +4864,7 @@ tbody.collapse.in {
 }
 
 .navbar-inverse .navbar-brand {
-    color: #2c3e50
+    color: #fff
 }
 
 .navbar-inverse .navbar-brand:focus, .navbar-inverse .navbar-brand:hover {
