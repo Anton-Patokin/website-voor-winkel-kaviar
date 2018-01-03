@@ -352,6 +352,34 @@ Responsive navbar-brand image CSS
             padding: 4px;
         }
 
+
+        .component-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+        }
+
+        .component-item {
+            flex: 0 1 31%;
+        }
+
+        .component-wrapper:after {
+            content: "";
+            flex: 0 1 31%;
+        }
+
+        @media screen and (max-width: 768px) {
+            .component-item {
+                flex: 0 1 48%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .component-item {
+                flex: 0 1 100%;
+            }
+        }
+
     </style>
     <script
             src="https://code.jquery.com/jquery-3.2.0.slim.min.js"

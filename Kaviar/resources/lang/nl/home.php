@@ -24,4 +24,10 @@ return [
     'subscribe'=>'держите меня в курсе',
     'send'=>'отослать',
     'test' => 'goede dag',
+
+
+
+
+    'brochure' => 'Waar kan ik het kopen? ',
+    'brochure_sub' => 'Листовоки?',
 ];

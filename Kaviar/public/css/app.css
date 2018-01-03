@@ -6566,6 +6566,7 @@ button.close {
 
 .carousel-inner {
     overflow: hidden;
+    max-height: 500px;
     width: 100%
 }
 

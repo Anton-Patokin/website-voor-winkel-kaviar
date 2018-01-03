@@ -10,7 +10,7 @@ return [
     'other'=>'autre',
     'contact'=>'Contact',
     'contact_text'=>'Напишите нам сообщение',
-    'banner'=>'Аутентичные ароматы по российским традициям',
+    'banner'=>'MS Express | Свежий осётр, Белуга и чёрная икра из Бельгии',
     'products'=>'Наша продукция',
     'name'=>'Имя',
     'delivery'=>'доставка',
@@ -24,4 +24,10 @@ return [
     'subscribe'=>'держите меня в курсе',
     'send'=>'отослать',
     'test' => 'bonjour',
+
+
+
+
+    'brochure' => "Où puis-je l'acheter?",
+    'brochure_sub' => 'Аlyers',
 ];

@@ -34,10 +34,12 @@ class HomeController extends Controller
         return view('welcome')->with('language', Config::get('app.locale'));
     }
 
-
     public function product($product)
     {
-        return view('products.producte')->with('language', Config::get('app.locale'))->with('product', $product);
+            $blade = 'products/'.$product.'.'.$product.'-'.Config::get('app.locale');
+            return view($blade)->with('language', Config::get('app.locale'))->with('product', $product);
+
+//        return view('products.producte')->with('language', Config::get('app.locale'))->with('product', $product);
     }
 
     public function video($id)

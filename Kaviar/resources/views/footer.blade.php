@@ -3,10 +3,14 @@
         <div class="col-md-12 margin-bottom-2">
             <div class="col-md-6 ">
                 {{--text-center--}}
-                <div class="col-md-12 " id="about_us">
+                <div class="col-md-6">
+                    <iframe width="100%" height="250px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Abdijstraat%2C%20Antwerp%20msexpress&key=AIzaSyCPe8GFC_SZz7BWH17695FwfT1sHC9kR6g" allowfullscreen></iframe>
+                </div>
+                <div class="col-md-6 " id="about_us">
                     <h2>{{trans('home.about_us')}}</h2>
                     <p>{{trans('home.about_us_text')}}</p>
                 </div>
+
             </div>
             <div class="col-md-6 line-left">
                 <div class="col-md-12">
@@ -67,7 +71,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
