@@ -372,6 +372,13 @@ Responsive navbar-brand image CSS
             .component-item {
                 flex: 0 1 48%;
             }
+            .languege.nav > li, .nav > li > a{
+                display: inline;
+            }
+
+            .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover{
+                background-color: rgba(255, 255, 255, 0);
+            }
         }
 
         @media screen and (max-width: 480px) {
@@ -394,9 +401,8 @@ Responsive navbar-brand image CSS
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="collapse navbar-collapse" id="app-navbar-collapse">
-
-                        <ul class="nav navbar-nav navbar-right">
+                    <div>
+                        <ul class="nav navbar-nav navbar-right languege">
                             @if(Auth::user())
                                 <li>
                                     <a href="{{ url('/mails') }}">Емейлы</a>
