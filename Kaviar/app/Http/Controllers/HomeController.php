@@ -104,6 +104,10 @@ class HomeController extends Controller
 
         return redirect('/' . Config::get('app.locale'));
     }
+
+    public function about_us(){
+        return view('about_us')->with('language', Config::get('app.locale'));
+    }
 }
 
 

@@ -34,4 +34,6 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
     Route::get('/add-product', 'AdminController@add_product');
     Route::get('/show-product-fish', 'AdminController@show_product');
     Route::get('/product/{product}', 'HomeController@product');
+    Route::get('/about-us', 'HomeController@about_us');
+
 });

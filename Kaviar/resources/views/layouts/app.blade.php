@@ -9,20 +9,29 @@
     <meta name="author" content="MS express">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="icon" href="{{url('/image/favicon.ico' )}}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{url('/image/favicon.ico' )}}" type="image/x-icon">
     <title>{{ trans('home.title') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
+            integrity="sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow="
+            crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 <div id="app">
     {{--<nav class="navbar navbar-default navbar-static-top nav_top">--}}
-    {{--<div class="container-fluid">--}}
+    {{--<div class="container">--}}
     {{--<div class="row">--}}
     {{--<div class="col-md-12">--}}
-    {{--<div>--}}
-    {{--<ul class="nav navbar-nav navbar-right languege">--}}
+    {{--<div class="collapse navbar-collapse" id="app-navbar-collapse">--}}
+
+    {{--<ul class="nav navbar-nav navbar-right">--}}
     {{--@if(Auth::user())--}}
     {{--<li>--}}
     {{--<a href="{{ url('/mails') }}">Емейлы</a>--}}
@@ -46,7 +55,7 @@
     <div class="example3 main_navbar">
         <nav class="navbar navbar-inverse navbar-static-top">
 
-            <div class="container-fluid">
+            <div class="container">
                 <div class="row">
 
 
@@ -85,7 +94,9 @@
                                 <li class="{{ Request::path() == $language.'/product/other' || Request::path() == '/product/other' ? 'active' : '' }}">
                                     <a href="{{url('/'.$language.'/product/other')}}">{{trans('home.other')}}</a></li>
 
-                                <li><a class="scroll_anker" name="about_us" href="#">{{trans('home.about_us')}}</a></li>
+                                <li class="{{ Request::path() == $language.'/about-us' || Request::path() == '/about-us' ? 'active' : '' }}">
+                                    <a class="scroll_anker" name="about_us"
+                                       href="{{url('/'.$language.'/about-us')}}">{{trans('home.about_us')}}</a></li>
                                 <li><a class="scroll_anker" name="contact" href="#">{{trans('home.contact')}}</a></li>
 
 
@@ -105,10 +116,7 @@
 </div>
 
 <!-- Scripts -->
-<script
-        src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
-        integrity="sha256-qLAv0kBAihcHZLI3fv3WITKeRsUX27hd6upBBa0MSow="
-        crossorigin="anonymous"></script>
+
 <script src="{{ asset('js/app.js') }}"></script>
 </body>
 <script>

@@ -29,7 +29,7 @@
                             :</label>
                         <div class="col-md-12">
                             <input type="name" class="form-control input-lg" id="name" name="name"
-                                   value="{{ old('name') }}" placeholder="Anton Patokin">
+                                   value="{{ old('name') }}" placeholder="IKRIANNIKOVA ELENA">
                             @if ($errors->has('name'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
@@ -42,7 +42,7 @@
                             :</label>
                         <div class="col-md-12">
                             <input type="email" class="form-control input-lg" id="email" name="email"
-                                   value="{{ old('email') }}" placeholder="Anton.patokin&#64;gmail.com">
+                                   value="{{ old('email') }}" placeholder="info&#64;msexpress.be">
                             @if ($errors->has('email'))
                                 <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
@@ -67,16 +67,16 @@
                         <div class=" form-group{{ $errors->has('checkbox') ? ' has-error' : '' }}">
                             <div class="col-md-3">
                                 <label class="margin-left-checkbox">
-                                    <input type="checkbox" name="checkbox['company']" id="opta"/>
-                            <span class="checkboxtext">
+                                    <input type="checkbox" name="checkbox['company']" id="opta"/ checked>
+                                    <span class="checkboxtext">
                               {{trans('mail.company')}}
                             </span>
                                 </label>
                             </div>
                             <div class="col-md-3">
                                 <label class="margin-left-checkbox">
-                                    <input type="checkbox" name="checkbox['person']" id="opta" checked/>
-                            <span class="checkboxtext">
+                                    <input type="checkbox" name="checkbox['person']" id="opta" />
+                                    <span class="checkboxtext">
                               {{trans('mail.person')}}
                             </span>
                                 </label>
