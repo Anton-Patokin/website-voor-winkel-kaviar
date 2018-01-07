@@ -13,7 +13,8 @@
             <img src="{{url('/image/products/product_1.jpg')}}" alt="{{trans('image_alt.fish')}}">
             <div class="caption">
                 <p>{{trans('home.fish_text_short')}}</p>
-                <p class="margin-top-10"><a href="{{ $_SERVER['REQUEST_URI'] .'/test'}}" class="btn btn-info btn-lg"
+                <p class="margin-top-10">
+                    <a href="{{url('/'.$language.'/product/fish')}}" class="btn btn-info btn-lg"
                                             role="button">{{trans('home.production_button')}}</a>
                     <a href="{{ $_SERVER['REQUEST_URI'] .'/video/fish'}}" class="btn btn-success btn-lg"
                        role="button" data-toggle="modal"
@@ -32,7 +33,7 @@
             <div class="caption">
                 <p>{{trans('home.caviar_text_short')}}</p>
                 <p class="margin-top-10">
-                    <a href="#" class="btn btn-info btn-lg" role="button">{{trans('home.production_button')}}</a>
+                    <a href="{{url('/'.$language.'/product/caviar')}}" class="btn btn-info btn-lg" role="button">{{trans('home.production_button')}}</a>
                     <a href="{{ $_SERVER['REQUEST_URI'] .'/video/caviar'}}" class="btn btn-success  btn-lg"
                        role="button" data-toggle="modal" data-target="#myModal_1">{{trans('home.video_button')}}</a>
 
@@ -48,7 +49,8 @@
             <img src="{{url('/image/products/product_3.jpg')}}" alt="{{trans('image_alt.other_product')}}">
             <div class="caption">
                 <p>{{trans('home.other_text_short')}}</p>
-                <p class="margin-top-10"><a href="#" class="btn btn-info btn-lg"
+                <p class="margin-top-10">
+                    <a href="{{url('/'.$language.'/product/other')}}" class="btn btn-info btn-lg"
                                             role="button">{{trans('home.production_button')}}</a></p>
             </div>
         </div>
@@ -61,8 +63,8 @@
             <img src="{{url('/image/products/product_4.jpg')}}" alt="{{trans('image_alt.delivery')}}">
             <div class="caption">
                 <p>{{trans('home.delivery_text_short')}}</p>
-                <p class="margin-top-10"><a href="#" class="btn btn-info btn-lg"
-                                            role="button">{{trans('home.delivery_button')}}</a></p>
+                {{--<p class="margin-top-10"><a href="#" class="btn btn-info btn-lg"--}}
+                                            {{--role="button">{{trans('home.delivery_button')}}</a></p>--}}
             </div>
         </div>
     </div>

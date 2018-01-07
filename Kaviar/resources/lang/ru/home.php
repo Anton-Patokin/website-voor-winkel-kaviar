@@ -6,19 +6,22 @@ return [
     'logo' => 'логотип ms express | по продаже русских продуктов | картика форме осетры',
     'home' => 'главная',
     'fish' => 'Рыба',
-    'fish_text_short' => 'Свежий осётр и белуга, а также изделия из этой рыбы, с доставкой во все страны ЕС There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don\'t look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn\'t anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, ',
+    'fish_text_short' => 'Лучшее предложение из Бельгии, свежий русский осётр (лат. Acipenser Gueldenstaedtii) в упаковке. Срок хранения в свежем виде 10 дней, при температуре от 0°C до +2°C. А также продукцию из осётра и белуги. В нашем ассортименте вы найдёте свежее филе осётра на коже и без кожи, филе осётра холодного и горячего копчения в индивидуальной вакуумной упаковке, нарезка из осётра в вакуумной упаковке, пельмени, манты и чебуреки осетровые (из чистого филе осётра) и белоснежная вяленая белуга с мраморным оттенком. Для рыбных хозяйств предлагаем живого малька (25-30 см) русского осётра (лат. Acipenser Gueldenstaedtii) с доставкой на место, заказ от 25 штук.',
 
     'caviar' => 'Икра',
-    'caviar_text_short' => 'Черная икра русского осетра от   ‘Ryal Belgian Caviar’ В металлических банках каждую банку вы получите на льду в спецайльной упаковки. Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"',
+    'caviar_text_short' => 'Мы продаём настоящую осетровую икру от легального рыбного хозяйства, расположенного на территории Бельгии. Вся выпускаемая продукция проходит обязательную сертификацию. Проводится регулярный контроль качества в соответствии с европейскими стандартами налагаемыми CITES. Чёрная икра получена из рыбы выращенной в Аква культуре, методом забоя рыбы. Мы специализируемся именно на этой продукции и осуществляем продажу легальной чёрной икры, поэтому в нашем ассортименте всегда только качественная и 100% свежая чёрная икра. Предлагаем на ваш выбор пять разновидностей икры осетровых пород. Всё икорное разнообразие на 100% натуральное и приготовлено по традиционной манере с добавлением не большого количества соли. Идеальная температура хранения для чёрной икры от -2°C до +4°C. Сроки хранения чётной икры от 3 до 8 месяцев.',
 
     'other' => 'Другие продукты ',
-    'other_text_short' => 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for \'lorem ipsum\' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).',
+    'other_text_short' => 'Это по-настоящему уникальный продукт, гармонично соединивший в себе инновации и
+верность старинным традициям. Водка производится из специального настоя овсяных
+хлопьев, родниковой воды, прошедшей многоступенчатую систему очистки, а также
+лучших спиртов из отборных сортов пшеницы.',
 
     'contact' => 'контакт',
     'contact_text' => 'Напишите нам сообщение',
 
     'delivery' => 'доставка',
-    'delivery_text_short' => 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"',
+    'delivery_text_short' => 'Доставка свежего осётра и продукции из осётра и белуги осуществляется собственным транспортом, при температуре от +2°C до -18°C, с соблюдением санитарных норм и контроля температурного режима, в соответствии с законодательством ЕС и требованиями FAVV. Federaal Agentschap voor de veiligheid van de voedselketen (België) Не большие заказы на прочие продукты и чёрную икру отправляем экспресс почтой с помощью компании TNT België. Отправка товаров осуществляется каждую неделю с понедельника по четверг.',
     'delivery_button' => 'Узнать больше',
 
     'banner' => 'Подлинный вкус в соответствии с русскими традициями',
@@ -28,7 +31,7 @@ return [
     'name' => 'Имя',
 
     'about_us' => 'О нас',
-    'about_us_text' => 'when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including v',
+    'about_us_text' => 'Мы родились и выросли на реке Волга в России и с детства хорошо знаем настоящий вкус чёрной икры и вкус мяса русского осётра (лат. Acipenser Gueldenstaedtii) и Белуги (лат. Huso Huso). Мясо осётра является рыбным деликатесом, содержит легкоусвояемые белок и жиры, по вкусу не уступает чёрной икре, содержит большое количество ОМЕГА 3 в которой нуждается наш организм. Содержание рыбьего жира в мясе осётра колеблется от 10% до 15% является высокопитательным и полезным продуктом. Белок мяса осётра полноценен, содержит все аминокислоты и усваивается организмом человека на 98%. Из мяса осётра готовят превосходную уху, вкусный шашлык, отбивные котлеты, его коптят, жарят и запекают в духовке. Предлагаем вам всё это отведать. На европейском рынке с 2010 года продаём и доставляем свежего осётра и чёрную икру',
     'email' => 'Электронная почта',
     'company_id' => 'Регестрцоный номер',
     'company' => 'Фирма',
