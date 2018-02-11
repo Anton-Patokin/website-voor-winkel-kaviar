@@ -20,19 +20,19 @@
             </div>
 
             <div class="item">
-                <img src="{{url('/image/carousel/4.jpg')}}" alt="{{trans('image_alt.carousel_3')}}">
+                <img src="{{url('/image/carousel/4.JPG')}}" alt="{{trans('image_alt.carousel_4')}}">
             </div>
 
             <div class="item">
-                <img src="{{url('/image/carousel/5.jpg')}}" alt="{{trans('image_alt.carousel_3')}}">
+                <img src="{{url('/image/carousel/5.JPG')}}" alt="{{trans('image_alt.carousel_5')}}">
             </div>
 
             <div class="item">
-                <img src="{{url('/image/carousel/6.jpg')}}" alt="{{trans('image_alt.carousel_3')}}">
+                <img src="{{url('/image/carousel/6.JPG')}}" alt="{{trans('image_alt.carousel_6')}}">
             </div>
 
             <div class="item">
-                <img src="{{url('/image/carousel/7.jpg')}}" alt="{{trans('image_alt.carousel_3')}}">
+                <img src="{{url('/image/carousel/7.jpg')}}" alt="{{trans('image_alt.carousel_7')}}">
             </div>
             <div class=" right-caption carousel-caption text-right">
                 <h1 class="font-normal-banner">{{trans('home.banner')}}</h1>

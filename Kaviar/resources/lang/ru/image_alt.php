@@ -9,5 +9,9 @@ return [
     "carousel_1" => "",
     "carousel_2" => "",
     "carousel_3" => "",
+    "carousel_4" => "",
+    "carousel_5" => "",
+    "carousel_6" => "",
+    "carousel_7" => "",
 
 ];

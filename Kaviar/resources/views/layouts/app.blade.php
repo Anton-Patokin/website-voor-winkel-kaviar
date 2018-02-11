@@ -14,7 +14,7 @@
     <title>{{ trans('home.title') }}</title>
 
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 
     <script
             src="https://code.jquery.com/jquery-3.2.0.slim.min.js"
@@ -117,7 +117,7 @@
 
 <!-- Scripts -->
 
-<script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('/js/app.js') }}"></script>
 </body>
 <script>
     if ($('.has-error').length > 0) {
