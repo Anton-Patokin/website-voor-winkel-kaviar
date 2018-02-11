@@ -77,7 +77,7 @@ return [
     |
     */
 
-    'locale' => 'nl',
+    'locale' => 'ru',
 //    'alt_langs' => array ('ru', 'fr','nl'),
 
 //    'locales' => ['ru' => 'Russian', 'fr' => 'france','nl'=>'dutch'],
@@ -92,7 +92,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'nl',
+    'fallback_locale' => 'ru',
 
     /*
     |--------------------------------------------------------------------------

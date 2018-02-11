@@ -16,7 +16,7 @@
             <div class="col-md-6 " id="about_us">
                 <h2>{{trans('home.brochure_sub')}}</h2>
                 @foreach (["EN","NL","FR","DE"] as $index=>$folder)
-                    <p>{{$folder}}: <a href="/brochure/ROYAL BELGIAN CAVIAR - PROSPEKT FOLDER - {{$folder}}.pdf">ROYAL
+                    <p><a href="/brochure/ROYAL BELGIAN CAVIAR - PROSPEKT FOLDER - {{$folder}}.pdf">ROYAL
                             BELGIAN CAVIAR - PROSPEKT FOLDER - {{$folder}}.pdf</a></p>
                 @endforeach
                 <p></p>

@@ -11,9 +11,9 @@
 <div class="wrap">
     <div class="logo">
         <h1>404</h1>
-        <p>Error occurred! - File not Found</p>
+        <p>Error</p>
         <div class="sub">
-            <p><a href="#">Back</a></p>
+            <p><a href="{{url('/)}}">Home</a></p>
         </div>
     </div>
 </div>
