@@ -55,7 +55,7 @@
     <div class="example3 main_navbar">
         <nav class="navbar navbar-inverse navbar-static-top">
 
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
 
 

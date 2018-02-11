@@ -25,7 +25,9 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function () {
 //        return trans('home.test');
 //    });
 
-
+if(App::getLocale() != "ru"){
+    App::setLocale("ru");
+}
     Route::get('/', 'HomeController@index');
 
     Route::get('/home', 'HomeController@index');
